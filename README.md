@@ -10,9 +10,9 @@ When users go to `/lucky_numbers`, they should see their five lucky numbers for 
 
 Make `/zodiacs/leo`, `/zodiacs/cancer`, etc work to display individual fortunes. I've included routes for each of these; uncomment them one at a time and try visiting the URL in the browser.
 
-Controllers, actions, and views are sometimes present, but each one has something wrong with it. It is your job to debug.
+Controllers, actions, and views are sometimes present, but each RCAV flow has something wrong with it. It is your job to debug. Refer to your RCAV Flowchart.
 
-The first issue, for example, is that the controller file for zodiacs is located in the wrong place; it is in `app/controllers/concerns` rather than `app/controllers`. Move it to the right place using Finder.
+The first issue, for example, is that the controller file for zodiacs is located in the wrong place; it is in `app/controllers/concerns` rather than `app/controllers`. Move it to the right place using Finder. There are other things wrong with that file as well.
 
 Continue to debug using the error messages in your browser as your guide.
 
