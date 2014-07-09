@@ -1,0 +1,13 @@
+<div class="page-header">
+  <h1>List of Zodiacs</h1>
+</div>
+
+<div class="row">
+  <div class="col-md-12">
+    <ul class="list-group">
+      <% @zodiac_hashes.each do |zodiac_hash| %>
+        <li class="list-group-item"><%= zodiac_hash[:sign].capitalize %>: <%= zodiac_hash[:horoscope] %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
