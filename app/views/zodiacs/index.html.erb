@@ -6,7 +6,11 @@
   <div class="col-md-12">
     <ul class="list-group">
       <% @zodiac_hashes.each do |zodiac_hash| %>
-        <li class="list-group-item"><%= zodiac_hash[:sign].capitalize %>: <%= zodiac_hash[:horoscope] %></li>
+        <li class="list-group-item">
+          <a href="/zodiacs/<%= zodiac_hash[:sign] %>">
+            <%= zodiac_hash[:sign].capitalize %>
+          </a>: <%= zodiac_hash[:horoscope] %>
+        </li>
       <% end %>
     </ul>
   </div>
