@@ -1,29 +1,21 @@
-## Fortune Teller
+## Fortune Teller: Phase II
 
-Our very first Rails app. Our goal will be to allow the user to take three actions:
+### Bootstrap
 
-### Go to `/lucky_numbers`
+Link Bootstrap CSS and JS to this project. You can use the CDN-hosted versions, rather than downloading them;
 
-When users go to `/lucky_numbers`, they should see their five lucky numbers for the day. These numbers will be randomly chosen. I've already added the route, controller, action, and view; but you need to add some logic to the action to generate the random numbers and store them in the instance variables that the view is using.
+http://www.bootstrapcdn.com/
 
-### Go to `/zodiacs/:sign`
+We typically link to assets in the `<head>` of our HTML documents; where will we find the `<head>` tag in our Rails projects?
 
-Make `/zodiacs/leo`, `/zodiacs/cancer`, etc work to display individual fortunes. I've included routes for each of these; uncomment them one at a time and try visiting the URL in the browser.
+Add one or two Bootstrap styles somewhere to make `app/views/zodiacs/show_details.html.erb` look a little nicer.
 
-Controllers, actions, and views are sometimes present, but each RCAV flow has something wrong with it. It is your job to debug. Refer to your RCAV Flowchart.
+### Support `/zodiacs`
 
-The first issue, for example, is that the controller file for zodiacs is located in the wrong place; it is in `app/controllers/concerns` rather than `app/controllers`. Move it to the right place using Finder. There are other things wrong with that file as well.
+Support the following route:
 
-Continue to debug using the error messages in your browser as your guide.
+    get("/zodiacs", { :controller => "zodiacs", :action => "index" })
 
-### DRY up the 12 routes into one single, variable route
+If a user goes to the URL `/zodiacs`, display a list of ALL 12 zodiacs, both the sign and the fortune. Make each one clickable -- when clicked, the user should be taken to the show_details page for that particular fortune.
 
-I've already prepared a list of signs for you.
-
-You have access to a class called `Zodiac`.
-
-You can do `Zodiac.all` to retrieve an `Array` of zodiac `Hash`es.
-
-Each zodiac `Hash` has two keys -- `:sign` and `:fortune`.
-
-You can also do `Zodiac.find_by({ :sign => "leo" })` to retrieve a single zodiac `Hash`.
+Remember the Sublime snippet for `.each` -- when you are within a `.html.erb` file, type "each" and press TAB.
