@@ -4,6 +4,6 @@ class ZodiacsController < ApplicationController
   end
 
   def index
-    @zodiac_hashes = Zodiac.all
+    @zodiacs = Zodiac.all
   end
 end
